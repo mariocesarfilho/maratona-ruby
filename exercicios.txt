@@ -1,0 +1,78 @@
+# Ruby & Rails
+
+## Exercícios de Ruby Puro
+
+1.  Crie um array de números e imprima apenas os números pares usando
+    `select`.
+2.  Dado um array de strings, transforme todas em maiúsculas com `map`.
+3.  Conte quantas palavras possuem mais de 5 caracteres em um array.
+4.  Inverta a ordem de um array sem usar `reverse`.
+5.  Ordene um array de hashes pelo valor de uma chave (`:idade`).
+6.  Escreva um método que receba um número e retorne "FizzBuzz" se
+    divisível por 3 e 5, "Fizz" se só por 3, "Buzz" se só por 5, ou o
+    número caso contrário.
+7.  Crie um hash de livros com título e autor, e itere exibindo
+    `"Título - Autor"`.
+8.  Filtre um hash para retornar apenas os pares cujo valor tenha mais
+    de 6 caracteres.
+9.  Use `reduce` para somar todos os números de um array.
+10. Crie uma função que receba uma string e retorne se é um palíndromo.
+11. Gere um array de 10 números aleatórios (entre 1 e 100) e exiba
+    apenas os múltiplos de 7.
+12. Dada a frase `"ruby on rails é incrível"`, conte a frequência de
+    cada letra.
+13. Implemente uma classe `Livro` com atributos `titulo` e `autor`, e um
+    método `descricao` que retorna `"Título por Autor"`.
+14. Crie uma classe `Biblioteca` que armazene vários `Livro`s e tenha um
+    método para listar apenas os títulos.
+15. Implemente um método que receba uma lista de emails e retorne apenas
+    os que terminam com `@gmail.com` (use regex).
+16. Crie um array de arrays representando uma matriz 3x3, e imprima
+    apenas a diagonal principal.
+17. Escreva uma função que receba um número inteiro e retorne o
+    fatorial.
+18. Simule uma fila de atendimento usando um array (métodos `push` e
+    `shift`).
+19. Crie um programa que leia nomes e idades de pessoas (hashes) e
+    retorne quem é o mais velho.
+20. Dado um array de notas \[6, 8, 5, 10, 9\], calcule a média e retorne
+    "Aprovado" se \>= 7, "Reprovado" caso contrário.
+
+------------------------------------------------------------------------
+
+## Exercícios de Rails (CRUD Biblioteca)
+
+### Rotas / Controllers
+
+1.  Crie uma migration para adicionar o campo published_at para Book.
+2.  Rode o seed.
+3.  Crie uma rota nova que liste apenas livros publicados após 2020.
+4.  Adicione uma ação no controller para buscar livros por autor.
+5.  Crie um filtro antes da ação (`before_action`) que exiba log sempre
+    que acessar `BooksController`.
+
+### Views / Bootstrap
+
+6.  Na view de listagem de livros, use o Bootstrap para exibir os livros
+    em cards.
+7.  Adicione paginação com `will_paginate` na listagem de livros.
+8.  Crie uma partial `_book.html.erb` e use ela em `index` e `show`.
+
+### Forms / Strong Params
+
+9. Crie validações no model (`title` obrigatório, `author` com mínimo 3
+    caracteres).
+10. Mostre mensagens de erro personalizadas na view ao salvar livro
+    inválido.
+
+### Associações
+
+11. Crie um model para Categoria do Book e associe com o Book.
+12. Liste os livros agrupados por categoria.
+
+### Extras
+
+13. Inclua no Seed o modelo criado para Categoria.
+14. Crie um escopo no model `Book` chamado `recent` que retorna apenas
+    os últimos 5 livros cadastrados.
+15. Inclua uma rota para o index que usa esse escopo.
