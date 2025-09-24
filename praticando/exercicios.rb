@@ -149,12 +149,32 @@ require 'debug'
 # 7.  Crie um hash de livros com título e autor, e itere exibindo
 #     `"Título - Autor"`.
 
+# books = [
+#     { titulo: "A Lenda", autor: "Smith Valder" },
+#     { titulo: "Guerra do Infinito", autor: "Gordon Swthimeths" },
+#     { titulo: "Monstros SA", autor: "Disney"}
+# ]
+
+# books.each do |livros|
+#     puts " #{livros[:titulo]} - #{livros[:autor]} "
+# end
+
+
+# 8.  Filtre um hash para retornar apenas os pares cujo valor tenha mais
+#     de 6 caracteres.
+
 books = [
-    { titulo: "A Lenda", autor: "Smith Valder" },
+    { titulo: "A", autor: "Smi" },
     { titulo: "Guerra do Infinito", autor: "Gordon Swthimeths" },
     { titulo: "Monstros SA", autor: "Disney"}
 ]
 
+other_books = []
+
 books.each do |livros|
-    puts " #{livros[:titulo]} - #{livros[:autor]} "
+    if livros[:titulo].length + livros[:autor].length > 6
+        other_books.push(livros)
+    end
 end
+
+puts other_books
