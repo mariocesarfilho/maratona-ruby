@@ -187,34 +187,50 @@ require 'debug'
 
 # 10. Crie uma função que receba uma string e retorne se é um palíndromo.
 
-puts "Digite uma palavra: "
-word = gets.chomp
+# puts "Digite uma palavra: "
+# word = gets.chomp
 
-def palavras(word)
-    other_array = []
-    # word.each_char { |caractere| other_array.unshift(caractere) }
-    # other_string = other_array.join
+# def palavras(word)
+#     other_array = []
+#     # word.each_char { |caractere| other_array.unshift(caractere) }
+#     # other_string = other_array.join
 
-    # if word == other_string
-    #     puts "É um palíndromo"
-    # else
-    #     puts "Não é um palíndromo"
-    # end
+#     # if word == other_string
+#     #     puts "É um palíndromo"
+#     # else
+#     #     puts "Não é um palíndromo"
+#     # end
 
 
-    word.each_char do |caractere|
-        other_array.unshift(caractere)  
-    end 
+#     word.each_char do |caractere|
+#         other_array.unshift(caractere)  
+#     end 
 
-    palavra = other_array.join
+#     palavra = other_array.join
     
-    if word == palavra
-        puts "É um palíndromo"
-    else
-        puts "Não é um palíndromo"
-    end
-end
+#     if word == palavra
+#         puts "É um palíndromo"
+#     else
+#         puts "Não é um palíndromo"
+#     end
+# end
 
-palavras(word)
+# palavras(word)
 
+
+# 11. Gere um array de 10 números aleatórios (entre 1 e 100) e exiba
+#     apenas os múltiplos de 7.
+
+
+# numbers = 10.times.map {rand(1..100)}
+# print numbers
+# other = []
+
+# numbers.each do |numero|
+#     if numero % 7 == 0
+#         other.push(numero)
+#     end
+# end
+
+# print other
 
