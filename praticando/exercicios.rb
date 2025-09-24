@@ -163,18 +163,58 @@ require 'debug'
 # 8.  Filtre um hash para retornar apenas os pares cujo valor tenha mais
 #     de 6 caracteres.
 
-books = [
-    { titulo: "A", autor: "Smi" },
-    { titulo: "Guerra do Infinito", autor: "Gordon Swthimeths" },
-    { titulo: "Monstros SA", autor: "Disney"}
-]
+# books = [
+#     { titulo: "A", autor: "Smi" },
+#     { titulo: "Guerra do Infinito", autor: "Gordon Swthimeths" },
+#     { titulo: "Monstros SA", autor: "Disney"}
+# ]
 
-other_books = []
+# other_books = []
 
-books.each do |livros|
-    if livros[:titulo].length + livros[:autor].length > 6
-        other_books.push(livros)
+# books.each do |livros|
+#     if livros[:titulo].length + livros[:autor].length > 6
+#         other_books.push(livros)
+#     end
+# end
+
+# puts other_books
+
+# 9.  Use `reduce` para somar todos os números de um array.
+
+# numbers = [1,2,3,4,5,6,7,8,9,10].reduce(:+)
+
+# puts numbers
+
+# 10. Crie uma função que receba uma string e retorne se é um palíndromo.
+
+puts "Digite uma palavra: "
+word = gets.chomp
+
+def palavras(word)
+    other_array = []
+    # word.each_char { |caractere| other_array.unshift(caractere) }
+    # other_string = other_array.join
+
+    # if word == other_string
+    #     puts "É um palíndromo"
+    # else
+    #     puts "Não é um palíndromo"
+    # end
+
+
+    word.each_char do |caractere|
+        other_array.unshift(caractere)  
+    end 
+
+    palavra = other_array.join
+    
+    if word == palavra
+        puts "É um palíndromo"
+    else
+        puts "Não é um palíndromo"
     end
 end
 
-puts other_books
+palavras(word)
+
+
