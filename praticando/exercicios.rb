@@ -1,3 +1,5 @@
+require 'debug'
+
 # # -------Exercícios-------
 
 # # 1.  Crie um array de números e imprima apenas os números pares usando
@@ -67,10 +69,10 @@
 
 # 4.  Inverta a ordem de um array sem usar `reverse`.
 
-words = ['Mario', 'Maria', 'Joao', 'Samambaia']
+# words = ['Mario', 'Maria', 'Joao', 'Samambaia']
 
 
-other = []
+# other = []
 
 # other.push(words[3])
 # other.push(words[2])
@@ -80,8 +82,65 @@ other = []
 
 # Outra forma de fazer
 
-words.each do |inverted|
-    other.unshift(inverted)
-end
+# words.each do |inverted|
+#     other.unshift(inverted)
+# end
 
-print "#{other} \n"
+# print "#{other} \n"
+
+
+# number = [9,2,3,6,10,5,1,7,8,4]
+# other = []
+
+# number.each do |i|
+#     if numeros[i] > numeros[j]
+#         other.unshift(numeros[i])
+#     else
+#         other.push(numeros[j])
+#     end
+# end
+
+# print "#{other} \n"
+
+
+# 5.Ordene um array de hashes pelo valor de uma chave (`:idade`).
+
+# my_hash = [
+#     { nome: "Mario", :idade => 22 },
+#     { nome: "Cesar", :idade => 12 },
+#     { nome: "Lizandra", :idade => 54},
+#     { nome: "Claudia", :idade => 28},
+#     { nome: "Fernando", :idade => 100},
+#     { nome: "Clara", :idade => 36},
+#     { nome: "Gabriela", :idade => 1}
+# ]
+
+# other_hash = []
+
+# other_hash = my_hash.sort_by{ |my_hash| my_hash[:idade] }
+
+
+# print other_hash
+
+# 6.  Escreva um método que receba um número e retorne "FizzBuzz" se
+#     divisível por 3 e 5, "Fizz" se só por 3, "Buzz" se só por 5, ou o
+#     número caso contrário.
+
+# puts "Digite um número inteiro: "
+# number = gets.chomp.to_i
+
+
+# def testnumber(number)
+
+#     if number % 3 == 0 && number % 5 == 0
+#         puts "O número #{number} é um FizzBuzz"
+#     elsif number % 3 == 0
+#         puts "O número #{number} é um Fizz"
+#     elsif number % 5 == 0
+#         puts "O número #{number} é um Buzz"
+#     else
+#         puts "Apenas o número #{number}"
+#     end
+# end
+
+# testnumber(number)
