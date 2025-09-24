@@ -237,10 +237,31 @@ require 'debug'
 # 12. Dada a frase `"ruby on rails é incrível"`, conte a frequência de
 #     cada letra.
 
-frase = "ruby on rails é incrível"
-cnt = 0 #Guardar a quantidade de vezes que o caracter aparece
+# frase = "ruby on rails é incrível"
+# cnt = 0 #Guardar a quantidade de vezes que o caracter aparece
 
-for char in frase.chars.uniq
-    cnt = frase.count(char)
-    puts "O caracter #{char} apareceu #{cnt} na frase"
+# for char in frase.chars.uniq
+#     cnt = frase.count(char)
+#     puts "O caracter #{char} apareceu #{cnt} na frase"
+# end
+
+
+# 13. Implemente uma classe `Livro` com atributos `titulo` e `autor`, e um
+#     método `descricao` que retorna `"Título por Autor"`.
+
+class Livro
+   attr_accessor :titulo, :autor 
+
+   def initialize(titulo, autor)
+     @titulo = titulo
+     @autor = autor
+   end
+
+   def descricao()
+         puts "#{titulo} #{autor}"
+   end
 end
+
+livro = Livro.new("A Guerra Infinata", "Mário Sergio Cortela")
+
+puts livro.descricao
