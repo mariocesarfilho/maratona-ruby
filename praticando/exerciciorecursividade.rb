@@ -5,4 +5,21 @@ def numberrecursive(count = 1)
     numberrecursive(count + 1) if count < 10
 end
 
-numberrecursive
+# numberrecursive
+
+# --- Fatorial --- 
+
+
+def fatorial(number = 5)
+    
+    puts " Fatorial #{number} "
+    
+    if number == 0
+        1
+    else
+        number * fatorial(number - 1)  
+    end
+    
+end
+
+puts "Resultado Final #{fatorial}"
