@@ -34,7 +34,7 @@ class Biblioteca
             else
                 puts "!!!!Autor e Titulo não podem estar vazios!!!!!"
             end
-            
+
             puts "Deseja continuar criando livros?  |Sim||Nao|"
             aux = gets.chomp    
 
@@ -47,7 +47,7 @@ class Biblioteca
         # Para listar todos os livros eu criei um método que percorre o array 
         # aonde os livros estão armazenados
         @livros.each do |book|
-            puts "Autor: #{book.autor} - Título: #{book.titulo} "
+            puts " - Título: #{book.titulo} "
         end   
     end
 end
